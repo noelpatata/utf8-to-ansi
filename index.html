@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>UTF-8 → Windows-1252 Converter</title>
-</head>
-<body>
-  <h1>Encoding Converter</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UTF-8 → Windows-1252 Converter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Encoding Converter</h1>
+      Converts the input characters to Window-1252 characters
+      <br>
+      <br>
+      <select id="inputType">
+        <option value="utf8">UTF-8 Text</option>
+        <option value="hex">Hex Bytes</option>
+      </select>
 
-  <select id="inputType">
-    <option value="utf8">UTF-8 Text</option>
-    <option value="hex">Hex Bytes</option>
-  </select>
+      <textarea id="input" placeholder="Enter text or hex..."></textarea>
+      <textarea id="output" placeholder="Windows-1252 output"></textarea>
 
-  <textarea id="input" placeholder="Enter text or hex..."></textarea>
+      <button id="convertBtn">Convert</button>
 
-  <button id="convertBtn">Convert</button>
+    </div>
 
-  <textarea id="output" placeholder="Windows-1252 output"></textarea>
-
-  <script type="module" src="src/app.js"></script>
-</body>
+    <script type="module" src="src/app.js"></script>
+  </body>
 </html>
 

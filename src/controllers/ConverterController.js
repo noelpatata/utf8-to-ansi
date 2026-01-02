@@ -9,6 +9,13 @@ export class ConverterController {
   _bindUI() {
     document.getElementById("convertBtn")
       .addEventListener("click", () => this.convert());
+    document.getElementById("input")
+      .addEventListener("keydown", (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          this.convert();
+        }
+      });
   }
 
   convert() {
@@ -27,5 +34,7 @@ export class ConverterController {
 
     const outputValue = this.encodingService.convertHexArrayToWin1252String(hexArray);
     output.value = outputValue;
+
+    output.focus();
   }
 }

@@ -1,4 +1,6 @@
 import { ConverterController } from "./controllers/ConverterController.js";
 
-new ConverterController();
+document.addEventListener("DOMContentLoaded", () => {
+  new ConverterController();
+});
 
